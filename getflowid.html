@@ -1,0 +1,44 @@
+<!--
+  Get the Current Flow or Subflow ID in Node-Red
+-->
+
+<script type="text/x-red" data-template-name="getflowid">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name"/>
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="getflowid">
+  <p>
+  Use this node to retrieve the current flow or subflow id
+  <br>
+  Returns the nodeid, flowid and hostname in msg.payload. The rest of the message is passed through unchanged
+  	<br/><br/>
+    <h3>Input
+        <dl class="message-properties">
+        <dt> Name<span class="property-type">string</span></dt>
+        <dd> Name of the node. </dd>
+</dl>
+
+    </h3><br/>
+  </p>
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('getflowid', {
+        category: 'function',
+        color: '#E2D96E',
+        defaults: {
+            name: {value: "flow", required: true}
+        },
+        icon: 'hash.png',
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return (this.name || "getflowid");
+        }
+    });
+</script>
