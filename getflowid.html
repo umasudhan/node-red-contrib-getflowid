@@ -12,9 +12,10 @@
 
 <script type="text/x-red" data-help-name="getflowid">
   <p>
-  Use this node to retrieve the current flow or subflow id
+  Use this node to retrieve the current flow information
   <br>
-  Returns the nodeid, flowid and hostname in msg.payload. The rest of the message is passed through unchanged
+  Returns the nodeid, flowid, flowname and hostname in msg.flowinfo. The rest of the message including the payload if
+  any is passed through unchanged
   	<br/><br/>
     <h3>Input
         <dl class="message-properties">
